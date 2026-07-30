@@ -1,15 +1,19 @@
-# ABSTRACTION-Smart-Traffic-Management-System
+# POLYMORPHISM-Traffic-Management-System
 
-## Introduction
-Welcome to the Smart Traffic Management System repository! This project is a case study demonstrating the principles of Object-Oriented Programming (OOP), specifically focusing on **Data Abstraction**. 
+## Overview
+This repository contains a Python implementation of a Smart Traffic Management System. It is designed as a case study to demonstrate core Object-Oriented Programming (OOP) principles, specifically **inheritance**, **method overriding**, and **polymorphism**.
 
-## Task Summary
-In a smart city, various intelligent traffic devices need to be managed centrally. Every device receives a standard `activate()` command, but the complex internal workings of each specific device are abstracted away from the main system.
+## Features
+* **Parent Class (`TrafficDevice`):** Establishes a common blueprint with a base `activate()` method.
+* **Child Classes:** Includes `TrafficLight`, `SpeedCamera`, `PedestrianSignal`, and `EmergencySiren`.
+* **Method Overriding:** Each child class provides its own unique implementation of the `activate()` method so that each device performs a different task.
+* **Polymorphism in Action:** All devices are stored in a single list and activated through a unified loop. The loop calls the `activate()` method without needing to check or know the specific type of each device.
+* **Extensibility:** Easily accommodates the addition of a new `EmergencySiren` class without requiring any modifications to the core activation loop, adhering to clean coding practices.
 
-This program models that system by:
-1. Creating an abstract parent class `TrafficDevice` that defines the required blueprint.
-2. Implementing specific child classes (`TrafficLight`, `SpeedCamera`, `PedestrianSignal`, and an `EmergencySiren`).
-3. Using an abstract method to enforce that each child class handles its own `activate()` logic.
-4. Grouping all devices into a single list and activating them sequentially.
-
-By utilizing abstraction, the central activation loop interacts only with a simplified, unified interface. It does not need to know the specific underlying code or type of each device, ensuring the system's complexity remains hidden and modular.
+## How to Run
+1. Ensure you have Python installed on your machine.
+2. Clone this repository or download the python file (e.g., `main.py`).
+3. Open your terminal or command prompt and navigate to the folder containing the file.
+4. Run the script using the following command:
+   ```bash
+   python main.py
